@@ -13,7 +13,7 @@ function init() {
 window.addEventListener("DOMContentLoaded", init);
 
 // Create a new Leaflet map centered on the continental US
-var map = L.map("map").setView([28, -0], 2.5);
+var map = L.map("map").setView([25, 0], 2.5);
 
 // basemap
 var CartoDB_Voyager = L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
