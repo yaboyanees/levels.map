@@ -99,13 +99,13 @@ function addPoints(data) {
 
 // Returns different colors depending on the string passed
 // Used for the points layer
-/*function getColor(type) {
+function getColor(type) {
   switch (type) {
-    case "Coffee Shop":
+    case "Airtable":
       return "green";
     case "Restaurant":
       return "blue";
     default:
-      return "green";
+      return "red";
   }
-}*/
+}
