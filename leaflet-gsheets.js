@@ -5,8 +5,7 @@
 
 // init() is called as soon as the page loads
 function init() {
-  var pointsURL =
-    "https://docs.google.com/spreadsheets/d/1MvtG-2QBoLvjr3QSmvQKNsZ5eM82JoGJtzn0VAL_54k/edit?usp=sharing";
+  var pointsURL = "https://docs.google.com/spreadsheets/d/1MvtG-2QBoLvjr3QSmvQKNsZ5eM82JoGJtzn0VAL_54k/edit?usp=sharing";
 
   Tabletop.init({ key: pointsURL, callback: addPoints, simpleSheet: true }); // simpleSheet assumes there is only one table and automatically sends its data
 }
@@ -42,15 +41,10 @@ function addPoints(data) {
     var companyIcon = L.Icon.extend({
         options: {
             iconSize: [28, 24],
-            //shadowSize:   [50, 64],
-            //iconAnchor:   [22, 94],
-            //shadowAnchor: [4, 62],
-            //popupAnchor:  [-3, -76]
         }
     });
-
     var logoIcon = new companyIcon(
-        { iconUrl: data[row].Logo});
+        { iconUrl: data[row].Logo || 'https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/microsoft/209/briefcase_1f4bc.png' });
 
     marker.setIcon(logoIcon);
   }
